@@ -1,0 +1,28 @@
+---
+layout: layout.njk
+title: steve
+---
+
+<section class="intro-panel">
+<h2>Versioned biography engine</h2>
+<p>{{ site.channel }}</p>
+</section>
+
+{% for post in collections.releases %}
+
+<article
+id="{{ post.data.version }}"
+class="release-card"
+style="background: {{ post.data.color or '#2a2f45' }};"
+>
+
+<h2>
+{{ post.data.version }}
+<span class="release-title">{{ post.data.releaseTitle }}</span>
+</h2>
+
+{{ post.templateContent | safe }}
+
+</article>
+
+{% endfor %}

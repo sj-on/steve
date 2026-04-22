@@ -1,0 +1,14 @@
+<aside class="sidebar">
+<h3>Releases</h3>
+
+<ul class="release-nav">
+{% for post in collections.releases %}
+<li>
+<a href="#{{post.data.version}}">
+{{post.data.version}}
+</a>
+</li>
+{% endfor %}
+</ul>
+
+</aside>
