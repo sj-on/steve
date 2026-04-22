@@ -1,0 +1,12 @@
+version: 1
+builds:
+  - command: npm run build
+    directory: dist
+    environment:
+      - name: ELEVENTY_ENV
+        value: production
+deployment:
+  production:
+    command: echo "Cloudflare Pages will deploy from ./dist automatically"
+  preview:
+    command: echo "Cloudflare Pages will deploy from ./dist automatically"
