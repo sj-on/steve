@@ -32,5 +32,4 @@ yarn-error.log*
 .env.production.local
 
 # Eleventy cache
-.eleventy.js
 .eleventy/
