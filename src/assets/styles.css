@@ -19,13 +19,39 @@
   --serif:'Instrument Serif',Georgia,serif;
 }
 
-html,body{height:100%;background:var(--bg);color:var(--text);font-family:var(--mono);font-size:14px;line-height:1.6}
+html,body{height:100%;background:var(--bg);color:var(--text);font-family:var(--mono);font-size:14px;line-height:1.6;cursor:crosshair}
 body{display:flex;flex-direction:column;min-height:100vh}
 
 /* scanlines */
 body::before{
   content:'';position:fixed;inset:0;pointer-events:none;z-index:999;
   background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,0.08) 2px,rgba(0,0,0,0.08) 4px);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0,255,136,0.35) rgba(13,22,13,0.95);
+}
+
+*::-webkit-scrollbar{
+  width:11px;
+  height:11px;
+}
+*::-webkit-scrollbar-track{
+  background:rgba(13,22,13,0.92);
+  border:1px solid rgba(0,255,136,0.08);
+  border-radius:999px;
+}
+*::-webkit-scrollbar-thumb{
+  background:rgba(0,255,136,0.22);
+  border-radius:999px;
+  border:2px solid rgba(13,22,13,0.95);
+}
+*::-webkit-scrollbar-thumb:hover{
+  background:rgba(0,255,136,0.45);
+}
+*::-webkit-scrollbar-corner{
+  background:transparent;
 }
 
 header{
